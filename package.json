@@ -1,7 +1,6 @@
 {
-  "name": "projectwscss",
+  "name": "ownsite",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "compst": "node-sass sass/main.scss css/style.css -w",
@@ -13,5 +12,15 @@
   "devDependencies": {
     "live-server": "^1.2.1",
     "node-sass": "^4.14.1"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egorrya/ownsite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/egorrya/ownsite/issues"
+  },
+  "homepage": "https://github.com/egorrya/ownsite#readme",
+  "description": ""
 }
