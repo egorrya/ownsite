@@ -1,0 +1,17 @@
+{
+  "name": "projectwscss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compst": "node-sass sass/main.scss css/style.css -w",
+    "live-server": "live-server"
+  },
+  "keywords": [],
+  "author": "Egor Rya",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "node-sass": "^4.14.1"
+  }
+}
