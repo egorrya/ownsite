@@ -1,6 +1,26 @@
 .hero {
+  position: relative;
+  height: 100vh;
+
   &__intro {
-    margin-top: 32%;
-    margin-bottom: 180px;
+    position: absolute;
+    top: 33%;
+  }
+
+  &__scroll-to {
+    position: absolute;
+    bottom: 10%;
+    left: 6%;
+    color: $color-grey;
+    font-size: 1.6rem;
+
+    cursor: default;
+
+    & img {
+      height: 1.8rem;
+      margin-right: 10px;
+      -webkit-transform: translateY(2px);
+      transform: translateY(2px);
+    }
   }
 }

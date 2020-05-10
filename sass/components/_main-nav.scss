@@ -1,0 +1,44 @@
+.main-nav {
+  position: fixed;
+  top: 8rem;
+  right: 10%;
+  z-index: 10000;cursor: default;
+
+  &__item {
+    color: $color-grey;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+
+    &:after {
+      content: attr(data-hover);
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 1.8rem;
+      line-height: 1.2;
+      color: $color-w;
+      width: 0;
+      overflow: hidden;
+      white-space: nowrap;
+
+      transition: .3s ease-out width;
+    }
+
+    &:hover:after {
+      width: 100%;
+      transition: .3s ease-in width;
+    }
+
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+  }
+
+  &__item.active {
+    color: $color-w;
+  }
+}
