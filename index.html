@@ -8,6 +8,9 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
   </head>
   <body>
+    <div class="loader">
+      <div class="loader__element"></div>
+    </div>
     <header class="header">
       <nav class="main-nav">
         <a href="#" class="main-nav__item active" id="works" data-hover="Works"
@@ -33,5 +36,12 @@
         </div>
       </section>
     </main>
+
+    <script>
+      window.addEventListener("load", function () {
+        const loader = document.querySelector(".loader");
+        loader.className += " hidden"; // class "loader hidden"
+      });
+    </script>
   </body>
 </html>

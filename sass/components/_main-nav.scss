@@ -2,7 +2,8 @@
   position: fixed;
   top: 8rem;
   right: 10%;
-  z-index: 10000;cursor: default;
+  z-index: 10000;
+  cursor: default;
 
   &__item {
     color: $color-grey;

@@ -128,6 +128,70 @@ body {
   .main-nav__item.active {
     color: #f7f7f7; }
 
+.loader {
+  position: fixed;
+  z-index: 10001;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000; }
+
+.loader.hidden {
+  animation: loaderFadeOut 1.5s;
+  animation-fill-mode: forwards; }
+
+.loader__element {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  max-width: 30rem; }
+  .loader__element:before, .loader__element:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    filter: drop-shadow(0 0 0.66667rem rgba(247, 247, 247, 0.75)); }
+  .loader__element:before {
+    width: 100%;
+    padding-bottom: 100%;
+    box-shadow: inset 0 0 0 1.5rem #f7f7f7;
+    animation-name: pulsA; }
+  .loader__element:after {
+    width: calc(100% - 1.5rem*2);
+    padding-bottom: calc(100% - 1.5rem*2);
+    box-shadow: 0 0 0 0 #f7f7f7;
+    animation-name: pulsB; }
+
+@keyframes pulsA {
+  0% {
+    box-shadow: inset 0 0 0 1.5rem #f7f7f7;
+    opacity: 1; }
+  50%,
+  100% {
+    box-shadow: inset 0 0 0 0 #f7f7f7;
+    opacity: 0; } }
+
+@keyframes pulsB {
+  0%,
+  50% {
+    box-shadow: 0 0 0 0 #f7f7f7;
+    opacity: 0; }
+  100% {
+    box-shadow: 0 0 0 1.5rem #f7f7f7;
+    opacity: 1; } }
+
+@keyframes loaderFadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden; } }
+
 .header {
   max-width: 114rem;
   margin: 0 auto; }
@@ -141,7 +205,7 @@ body {
   height: 100vh; }
   .hero__intro {
     position: absolute;
-    top: 33%; }
+    top: 35%; }
   .hero__scroll-to {
     position: absolute;
     bottom: 10%;
