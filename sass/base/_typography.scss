@@ -30,3 +30,19 @@ body {
     url("../fonts/Radikal Regular/605c1c612570275f24508913462da771.svg#Radikal W03 Regular") format("svg");
   /* iOS 4.1- */
 }
+
+@font-face {
+  font-family: "Radikal Black";
+  src: url("../fonts/Radikal Black/f53745fa52b34296bb2a2517fcc641b3.eot");
+  /* IE9*/
+  src: url("../fonts/Radikal Black/f53745fa52b34296bb2a2517fcc641b3.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("../fonts/Radikal Black/f53745fa52b34296bb2a2517fcc641b3.woff2") format("woff2"),
+    /* chrome、firefox */
+    url("../fonts/Radikal Black/f53745fa52b34296bb2a2517fcc641b3.woff") format("woff"),
+    /* chrome、firefox */
+    url("../fonts/Radikal Black/f53745fa52b34296bb2a2517fcc641b3.ttf") format("truetype"),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("../fonts/Radikal Black/f53745fa52b34296bb2a2517fcc641b3.svg#Radikal W03 Black") format("svg");
+  /* iOS 4.1- */
+}

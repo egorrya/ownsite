@@ -8,18 +8,14 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
   </head>
   <body>
-    <div class="loader">
-      <div class="loader__element"></div>
-    </div>
+    <div class="loader"><div class="loader__element"></div></div>
     <header class="header">
       <nav class="main-nav">
         <a href="#" class="main-nav__item active" id="works" data-hover="Works"
           >Works</a
-        >
-        <a href="#" class="main-nav__item" id="about" data-hover="About"
+        ><a href="#" class="main-nav__item" id="about" data-hover="About"
           >About</a
-        >
-        <a href="#" class="main-nav__item" id="contacts" data-hover="Contacts"
+        ><a href="#" class="main-nav__item" id="contacts" data-hover="Contacts"
           >Contacts</a
         >
       </nav>
@@ -35,13 +31,69 @@
           <img src="/img/arrow.svg" />Scroll to discover
         </div>
       </section>
+      <section class="banner">
+        <div id="luxy" style="height: 4000%;">
+          <!--BANNER-->
+          <div class="bnr">
+            <div class="bnr_t">
+              <div class="no-out" style="z-index: 1;">
+                <h1 class="luxy-el" data-horizontal="1" data-speed-x="-25">
+                  <span>Backend & Frontend Development</span>
+                </h1>
+                <h1 class="le luxy-el" data-horizontal="1" data-speed-x="25">
+                  <span>Product Digital Design Solutions</span>
+                </h1>
+              </div>
+              <div
+                class="bnr_img imgrev luxy-el"
+                data-speed-y="-20"
+                data-offset="-80"
+              >
+                <img src="img/1-back.jpg" />
+                <div>
+                  <img src="img/1.jpg" class="luxy-el" data-speed-y="5" />
+                </div>
+              </div>
+              <div style="z-index: 3;">
+                <h1
+                  class="luxy-el outline"
+                  data-horizontal="1"
+                  data-speed-x="-25"
+                >
+                  <span>Backend & Frontend Development</span>
+                </h1>
+                <h1
+                  class="le luxy-el outline"
+                  data-horizontal="1"
+                  data-speed-x="25"
+                >
+                  <span>Product Digital Design Solutions</span>
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-
+    <!-- loader -->
     <script>
       window.addEventListener("load", function () {
         const loader = document.querySelector(".loader");
         loader.className += " hidden"; // class "loader hidden"
       });
     </script>
+    <!-- banner -->
+    <script src="js/luxy.js"></script>
+    <!--
+    <script src="js/emergence.js"></script>
+    -->
+    <script>
+      luxy.init();
+    </script>
+    <noscript
+      >Congrats Time Traveller, You are in the 90s. Now in order to access this
+      site you either need to update your browser or enable Javascript from
+      settings. And please don't use Internet explorer :).
+    </noscript>
   </body>
 </html>

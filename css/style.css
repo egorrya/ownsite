@@ -34,6 +34,13 @@ body {
   src: url("../fonts/Radikal Regular/605c1c612570275f24508913462da771.eot?#iefix") format("embedded-opentype"), url("../fonts/Radikal Regular/605c1c612570275f24508913462da771.woff2") format("woff2"), url("../fonts/Radikal Regular/605c1c612570275f24508913462da771.woff") format("woff"), url("../fonts/Radikal Regular/605c1c612570275f24508913462da771.ttf") format("truetype"), url("../fonts/Radikal Regular/605c1c612570275f24508913462da771.svg#Radikal W03 Regular") format("svg");
   /* iOS 4.1- */ }
 
+@font-face {
+  font-family: "Radikal Black";
+  src: url("../fonts/Radikal Black/f53745fa52b34296bb2a2517fcc641b3.eot");
+  /* IE9*/
+  src: url("../fonts/Radikal Black/f53745fa52b34296bb2a2517fcc641b3.eot?#iefix") format("embedded-opentype"), url("../fonts/Radikal Black/f53745fa52b34296bb2a2517fcc641b3.woff2") format("woff2"), url("../fonts/Radikal Black/f53745fa52b34296bb2a2517fcc641b3.woff") format("woff"), url("../fonts/Radikal Black/f53745fa52b34296bb2a2517fcc641b3.ttf") format("truetype"), url("../fonts/Radikal Black/f53745fa52b34296bb2a2517fcc641b3.svg#Radikal W03 Black") format("svg");
+  /* iOS 4.1- */ }
+
 .u-center-text {
   text-align: center !important; }
 
@@ -191,6 +198,80 @@ body {
   100% {
     opacity: 0;
     visibility: hidden; } }
+
+.outline {
+  -webkit-text-stroke: 0.01em #f7f7f7;
+  /*#4bbfda*/
+  text-stroke: 1px #f7f7f7;
+  color: transparent; }
+
+.imgrev img {
+  width: 100%; }
+
+.imgrev::before {
+  content: "";
+  background: #000000;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  z-index: 5; }
+
+.bnr {
+  position: relative;
+  height: 100vh; }
+
+.bnr_t {
+  position: relative;
+  transform: translate(0, 55vh);
+  height: inherit;
+  font-family: "Radikal Black", "Radikal", Helvetica, Arial, sans-serif;
+  line-height: 110%;
+  font-size: 5vw; }
+
+.bnr_t > div {
+  position: absolute; }
+
+.bnr_t > .no-out h1 {
+  -webkit-text-stroke: 0 #f7f7f7;
+  text-stroke: 0 #f7f7f7;
+  color: #f7f7f7; }
+
+.bnr_t img {
+  width: 39vw;
+  margin: auto; }
+
+.bnr_img {
+  width: 35%;
+  height: 90%;
+  position: relative;
+  margin-left: 55%;
+  z-index: 2;
+  margin-top: -4%;
+  border-radius: 20px;
+  overflow: hidden; }
+
+.bnr_img > div {
+  position: absolute;
+  top: 8%;
+  left: -5%;
+  width: 50%; }
+
+.bnr_img > div img {
+  transition: none; }
+
+.bnr_img img {
+  z-index: 3; }
+
+@media only screen and (min-width: 1140px) {
+  .bnr_t {
+    transform: translate(0, 30vh); }
+  .bnr h1 {
+    line-height: 110%;
+    font-size: 6vw; }
+  .bnr_img {
+    margin-top: -10%; } }
 
 .header {
   max-width: 114rem;
