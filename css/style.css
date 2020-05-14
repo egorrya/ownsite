@@ -6,7 +6,8 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
 
 body {
   box-sizing: border-box;
@@ -201,7 +202,6 @@ body {
 
 .outline {
   -webkit-text-stroke: 0.01em #f7f7f7;
-  /*#4bbfda*/
   text-stroke: 1px #f7f7f7;
   color: transparent; }
 
@@ -244,7 +244,7 @@ body {
 
 .bnr_img {
   width: 35%;
-  height: 90%;
+  height: 80%;
   position: relative;
   margin-left: 55%;
   z-index: 2;
@@ -266,12 +266,12 @@ body {
 
 @media only screen and (min-width: 1140px) {
   .bnr_t {
-    transform: translate(0, 30vh); }
+    transform: translate(0, 50vh); }
   .bnr h1 {
     line-height: 110%;
     font-size: 6vw; }
   .bnr_img {
-    margin-top: -10%; } }
+    margin-top: -50vh; } }
 
 .header {
   max-width: 114rem;

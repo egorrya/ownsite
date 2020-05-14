@@ -1,7 +1,5 @@
 .outline {
   -webkit-text-stroke: .01em $color-w;
-  /*#4bbfda*/
-  ;
   text-stroke: 1px $color-w;
   color: transparent;
 }
@@ -40,7 +38,6 @@
   position: absolute;
 }
 
-
 .bnr_t>.no-out h1 {
   -webkit-text-stroke: 0 $color-w;
   text-stroke: 0 $color-w;
@@ -52,10 +49,9 @@
   margin: auto;
 }
 
-
 .bnr_img {
   width: 35%;
-  height: 90%;
+  height: 80%;
   position: relative;
   margin-left: 55%;
   z-index: 2;
@@ -77,12 +73,11 @@
 
 .bnr_img img {
   z-index: 3;
-
 }
 
 @media only screen and (min-width: 1140px) {
   .bnr_t {
-    transform: translate(0, 30vh);
+    transform: translate(0, 50vh);
   }
 
   .bnr h1 {
@@ -91,6 +86,6 @@
   }
 
   .bnr_img {
-    margin-top: -10%;
+    margin-top: -50vh;
   }
 }
