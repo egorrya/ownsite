@@ -1,0 +1,8 @@
+.works {
+  &[data-emergence="hidden"] {
+    @include hidden;
+  }
+  &[data-emergence="visible"] {
+    @include visible;
+  }
+}

@@ -23,11 +23,12 @@ html {
 }
 
 body {
-  background: $color-b;
   box-sizing: border-box;
+  background-color: $color-b;
+  color: $color-w;
 }
 
 ::selection {
-  background-color: $color-w;
-  color: $color-b;
+  background-color: $color-grey;
+  color: $color-w;
 }

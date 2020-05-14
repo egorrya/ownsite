@@ -13,6 +13,14 @@
   src: url("../css/fonts/Radikal Black/f53745fa52b34296bb2a2517fcc641b3.eot?#iefix") format("embedded-opentype"), url("../css/fonts/Radikal Black/f53745fa52b34296bb2a2517fcc641b3.woff2") format("woff2"), url("../css/fonts/Radikal Black/f53745fa52b34296bb2a2517fcc641b3.woff") format("woff"), url("../css/fonts/Radikal Black/f53745fa52b34296bb2a2517fcc641b3.ttf") format("truetype"), url("../css/fonts/Radikal Black/f53745fa52b34296bb2a2517fcc641b3.svg#Radikal W03 Black") format("svg");
   /* iOS 4.1- */ }
 
+.works[data-emergence="hidden"] {
+  visibility: hidden;
+  opacity: 0; }
+
+.works[data-emergence="visible"] {
+  visibility: visible;
+  opacity: 1; }
+
 *,
 *::after,
 *::before {
@@ -33,12 +41,13 @@ html {
       font-size: 75%; } }
 
 body {
-  background: #000000;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background-color: #000000;
+  color: #f7f7f7; }
 
 ::selection {
-  background-color: #f7f7f7;
-  color: #000000; }
+  background-color: #3b3b3b;
+  color: #f7f7f7; }
 
 body {
   box-sizing: border-box;
@@ -321,11 +330,11 @@ body {
 
 @keyframes glow {
   0% {
-    box-shadow: 0 0 1.5rem 0 rgba(224, 224, 224, 0.95); }
+    box-shadow: 0 0 1.5rem 0 rgba(255, 255, 255, 0.95); }
   50% {
     box-shadow: 0 -1rem 4rem 0 rgba(219, 219, 219, 0.55); }
   100% {
-    box-shadow: 0 0 1.5rem 0px rgba(224, 224, 224, 0.95); } }
+    box-shadow: 0 0 1.5rem 0px rgba(255, 255, 255, 0.95); } }
 
 .header {
   max-width: 114rem;
@@ -353,3 +362,7 @@ body {
       margin-right: 10px;
       -webkit-transform: translateY(2px);
       transform: translateY(2px); }
+
+.works {
+  transition: 0.8s ease-in;
+  background-color: #fff; }

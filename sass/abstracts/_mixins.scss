@@ -13,6 +13,16 @@
   transform: translate(-50%, -50%);
 }
 
+@mixin visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+@mixin hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
 // media queries w/ breakboint
 // phone, port, land, desk
 // 1em = 16px

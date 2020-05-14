@@ -89,12 +89,12 @@
 
 @keyframes glow {
   0% {
-    box-shadow: 0 0 1.5rem 0 rgba(224, 224, 224, 0.95);
+    box-shadow: 0 0 1.5rem 0 rgba(256, 256, 256, 0.95);
   }
   50% {
     box-shadow: 0 -1rem 4rem 0 rgba(219, 219, 219, 0.55);
   }
   100% {
-    box-shadow: 0 0 1.5rem 0px rgba(224, 224, 224, 0.95);
+    box-shadow: 0 0 1.5rem 0px rgba(256, 256, 256, 0.95);
   }
 }
