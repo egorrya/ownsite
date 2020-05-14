@@ -51,7 +51,7 @@
               >
                 <img src="img/1-back.jpg" />
                 <div>
-                  <img src="img/1.jpg" class="luxy-el" data-speed-y="5" />
+                  <img src="img/1.jpg" class="luxy-el" data-speed-y="7" />
                 </div>
               </div>
               <div style="z-index: 3;">
@@ -75,16 +75,14 @@
         </section>
       </div>
     </main>
+    <!-- paralax -->
+    <script src="js/luxy.js"></script>
     <!-- loader -->
     <script>
       window.addEventListener("load", function () {
         const loader = document.querySelector(".loader");
         loader.className += " hidden"; // class "loader hidden"
       });
-    </script>
-    <!-- paralax -->
-    <script src="js/luxy.js"></script>
-    <script>
       luxy.init();
     </script>
     <noscript
