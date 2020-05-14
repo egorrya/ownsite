@@ -21,21 +21,21 @@
       </nav>
     </header>
     <main>
-      <section class="hero">
-        <div class="row">
-          <h1 class="h1 hero__intro">
-            I am Egor Ryabysh.<br />A full stack developer.
-          </h1>
-        </div>
-        <div class="hero__scroll-to">
-          <img src="/img/arrow.svg" />Scroll to discover
-        </div>
-      </section>
-      <section class="banner">
-        <div id="luxy" style="height: 4000%;">
+      <div id="luxy">
+        <section class="hero">
+          <div class="row">
+            <h1 class="h1 hero__intro">
+              I am Egor Ryabysh.<br />A full stack developer.
+            </h1>
+          </div>
+          <div class="hero__scroll-to">
+            <img src="/img/arrow.svg" />Scroll to discover
+          </div>
+        </section>
+        <section class="banner">
           <!--BANNER-->
           <div class="bnr">
-            <div class="bnr_t">
+            <div class="bnr__text">
               <div class="no-out" style="z-index: 1;">
                 <h1 class="luxy-el" data-horizontal="1" data-speed-x="-25">
                   <span>Backend & Frontend Development</span>
@@ -44,7 +44,11 @@
                   <span>Product Digital Design Solutions</span>
                 </h1>
               </div>
-              <div class="bnr_img imgrev" data-speed-y="-20" data-offset="-80">
+              <div
+                class="bnr__img bnr__imgrev"
+                data-speed-y="-20"
+                data-offset="-80"
+              >
                 <img src="img/1-back.jpg" />
                 <div>
                   <img src="img/1.jpg" class="luxy-el" data-speed-y="5" />
@@ -52,14 +56,14 @@
               </div>
               <div style="z-index: 3;">
                 <h1
-                  class="luxy-el outline"
+                  class="luxy-el bnr__outline"
                   data-horizontal="1"
                   data-speed-x="-25"
                 >
                   <span>Backend & Frontend Development</span>
                 </h1>
                 <h1
-                  class="le luxy-el outline"
+                  class="le luxy-el bnr__outline"
                   data-horizontal="1"
                   data-speed-x="25"
                 >
@@ -68,8 +72,8 @@
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
     <!-- loader -->
     <script>
@@ -78,11 +82,8 @@
         loader.className += " hidden"; // class "loader hidden"
       });
     </script>
-    <!-- banner -->
+    <!-- paralax -->
     <script src="js/luxy.js"></script>
-    <!--
-    <script src="js/emergence.js"></script>
-    -->
     <script>
       luxy.init();
     </script>
