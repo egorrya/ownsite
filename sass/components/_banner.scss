@@ -1,5 +1,6 @@
 .banner {
   margin-top: 4rem;
+
 }
 
 .bnr__imgrev img {
@@ -35,11 +36,11 @@
     line-height: 110%;
     font-size: 5vw;
 
-    & > div {
+    &>div {
       position: absolute;
     }
 
-    & > .no-out h1 {
+    &>.no-out h1 {
       -webkit-text-stroke: 0 $color-w;
       text-stroke: 0 $color-w;
       color: $color-w;
@@ -64,14 +65,14 @@
     animation: glow 6s infinite ease-in-out;
     transition: 2s ease;
 
-    & > div {
+    &>div {
       position: absolute;
       top: 8%;
       left: -5%;
       width: 50%;
     }
 
-    & > div img {
+    &>div img {
       transition: none;
     }
 
@@ -91,9 +92,11 @@
   0% {
     box-shadow: 0 0 1.5rem 0 rgba(256, 256, 256, 0.95);
   }
+
   50% {
     box-shadow: 0 -1rem 4rem 0 rgba(219, 219, 219, 0.55);
   }
+
   100% {
     box-shadow: 0 0 1.5rem 0px rgba(256, 256, 256, 0.95);
   }

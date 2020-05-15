@@ -73,11 +73,12 @@
             </div>
           </div>
         </section>
-        <section
-          class="works"
-          data-emergence="hidden"
-          style="height: 1000px;"
-        ></section>
+        <section class="works" data-emergence="hidden" style="height: 1000px;">
+          <span class="works__fill"></span>
+          <div class="row">
+            <h2 class="h2">What I want to show you.</h2>
+          </div>
+        </section>
       </div>
     </main>
     <!-- paralax library -->
@@ -86,6 +87,7 @@
     <script src="js/emergence.js"></script>
     <script>
       // on load
+
       window.addEventListener("load", function () {
         // loader
         const loader = document.querySelector(".loader");
@@ -101,8 +103,8 @@
         reset: true,
         handheld: true,
         throttle: 250,
-        elemCushion: 0.7,
-        offsetTop: 0,
+        elemCushion: 0.5,
+        offsetTop: 100,
         offsetRight: 0,
         offsetBottom: 0,
         offsetLeft: 0,
