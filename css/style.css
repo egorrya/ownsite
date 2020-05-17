@@ -1,3 +1,4 @@
+@import url(../css/ionicons.css);
 @font-face {
   font-family: "Radikal";
   font-weight: 400;
@@ -12,15 +13,6 @@
   /* IE9*/
   src: url("../css/fonts/Radikal Black/f53745fa52b34296bb2a2517fcc641b3.eot?#iefix") format("embedded-opentype"), url("../css/fonts/Radikal Black/f53745fa52b34296bb2a2517fcc641b3.woff2") format("woff2"), url("../css/fonts/Radikal Black/f53745fa52b34296bb2a2517fcc641b3.woff") format("woff"), url("../css/fonts/Radikal Black/f53745fa52b34296bb2a2517fcc641b3.ttf") format("truetype"), url("../css/fonts/Radikal Black/f53745fa52b34296bb2a2517fcc641b3.svg#Radikal W03 Black") format("svg");
   /* iOS 4.1- */ }
-
-.works {
-  transition: all 0.8s ease-in; }
-  .works[data-emergence="hidden"] {
-    visibility: hidden;
-    opacity: 0; }
-  .works[data-emergence="visible"] {
-    visibility: visible;
-    opacity: 1; }
 
 *,
 *::after,
@@ -48,6 +40,15 @@ body {
 
 ::selection {
   background-color: #e6eef9; }
+
+.works {
+  transition: all 0.8s ease-in; }
+  .works[data-emergence="hidden"] {
+    visibility: hidden;
+    opacity: 0; }
+  .works[data-emergence="visible"] {
+    visibility: visible;
+    opacity: 1; }
 
 body {
   box-sizing: border-box;
@@ -370,16 +371,9 @@ body {
     border-radius: 99px;
     cursor: pointer;
     transition: color 0.15s ease-in; }
-  .tabs .notification {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
-    height: 2rem;
-    margin-left: 0.75rem;
-    border-radius: 50%;
-    background-color: var(--secondary-color);
-    transition: 0.15s ease-in; }
+  .tabs__icon {
+    font-size: 2rem;
+    margin-left: 1rem; }
   .tabs .glider {
     position: absolute;
     display: flex;
@@ -425,11 +419,6 @@ body {
     color: #3b3b3b;
     font-size: 1.6rem;
     cursor: default; }
-    .hero__scroll-to img {
-      height: 1.8rem;
-      margin-right: 10px;
-      -webkit-transform: translateY(2px);
-      transform: translateY(2px); }
 
 .works {
   position: relative;

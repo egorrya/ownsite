@@ -20,15 +20,14 @@
     display: none;
 
     &:checked {
-      &+label {
+      & + label {
         color: var(--primary-color);
 
-        &>.notification {
+        & > .notification {
           background-color: var(--primary-color);
           color: #fff;
         }
       }
-
     }
   }
 
@@ -44,18 +43,10 @@
     transition: color 0.15s ease-in;
   }
 
-  & .notification {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
-    height: 2rem;
-    margin-left: 0.75rem;
-    border-radius: 50%;
-    background-color: var(--secondary-color);
-    transition: 0.15s ease-in;
+  &__icon {
+    font-size: 2rem;
+    margin-left: 1rem;
   }
-
 
   & .glider {
     position: absolute;
@@ -71,7 +62,7 @@
 
   & input[id="radio-1"] {
     &:checked {
-      &~.glider {
+      & ~ .glider {
         transform: translateX(0);
       }
     }
@@ -79,7 +70,7 @@
 
   & input[id="radio-2"] {
     &:checked {
-      &~.glider {
+      & ~ .glider {
         transform: translateX(100%);
       }
     }
@@ -87,7 +78,7 @@
 
   & input[id="radio-3"] {
     &:checked {
-      &~.glider {
+      & ~ .glider {
         transform: translateX(200%);
       }
     }
@@ -95,7 +86,7 @@
 
   & input[id="radio-4"] {
     &:checked {
-      &~.glider {
+      & ~ .glider {
         transform: translateX(300%);
       }
     }
@@ -103,7 +94,7 @@
 
   & input[id="radio-5"] {
     &:checked {
-      &~.glider {
+      & ~ .glider {
         transform: translateX(400%);
       }
     }
