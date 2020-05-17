@@ -342,61 +342,208 @@ body {
   100% {
     box-shadow: 0 0 0.5rem 0px rgba(255, 255, 255, 0.95); } }
 
-:root {
-  --primary-color: #185ee0;
-  --secondary-color: #e6eef9; }
-
-.tabs {
+.tabs__labels {
   position: relative;
   display: flex;
-  background-color: #fff;
-  box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15), 0 6px 12px 0 rgba(24, 94, 224, 0.15);
+  background-color: #ffffff;
+  box-shadow: 0 0 1px 0 rgba(206, 160, 94, 0.15), 0 6px 12px 0 rgba(206, 160, 94, 0.15);
   border-radius: 99px; }
-  .tabs * {
-    z-index: 2; }
-  .tabs input[type="radio"] {
-    display: none; }
-    .tabs input[type="radio"]:checked + label {
-      color: var(--primary-color); }
-      .tabs input[type="radio"]:checked + label > .notification {
-        background-color: var(--primary-color);
-        color: #fff; }
-  .tabs .tab {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 5rem;
-    width: 20%;
-    font-size: 1.25rem;
-    border-radius: 99px;
-    cursor: pointer;
-    transition: color 0.15s ease-in; }
-  .tabs__icon {
-    font-size: 2rem;
-    margin-left: 1rem; }
-  .tabs .glider {
-    position: absolute;
-    display: flex;
-    height: 5rem;
-    width: 20%;
-    background-color: var(--secondary-color);
-    z-index: 1;
-    border-radius: 99px;
-    transition: 0.25s ease-out; }
-  .tabs input[id="radio-1"]:checked ~ .glider {
-    transform: translateX(0); }
-  .tabs input[id="radio-2"]:checked ~ .glider {
-    transform: translateX(100%); }
-  .tabs input[id="radio-3"]:checked ~ .glider {
-    transform: translateX(200%); }
-  .tabs input[id="radio-4"]:checked ~ .glider {
-    transform: translateX(300%); }
-  .tabs input[id="radio-5"]:checked ~ .glider {
-    transform: translateX(400%); }
+
+.tabs * {
+  z-index: 2; }
+
+.tabs input[type="radio"] {
+  display: none; }
+  .tabs input[type="radio"]:checked + .tabs label {
+    color: #cea05e; }
+
+.tabs .tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  width: 20%;
+  font-size: 1.25rem;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: color 0.15s ease-in; }
+
+.tabs__icon {
+  font-size: 2rem;
+  margin-left: 1rem; }
+
+.tabs .glider {
+  position: absolute;
+  display: flex;
+  height: 5rem;
+  width: 20%;
+  background-color: rgba(206, 160, 94, 0.2);
+  z-index: 1;
+  border-radius: 99px;
+  transition: 0.25s ease-out; }
 
 @media (max-width: 700px) {
   .tabs {
     transform: scale(0.6); } }
+
+.tabs__content__1, .tabs__content__2, .tabs__content__3, .tabs__content__4, .tabs__content__5 {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.5s; }
+
+.tabs input[id="radio-1"]:checked ~ .tabs__labels .glider {
+  transform: translateX(0); }
+
+.tabs input[id="radio-1"]:checked ~ .tabs__content .tabs__content__1 {
+  visibility: visible;
+  opacity: 1;
+  position: relative; }
+
+.tabs input[id="radio-2"]:checked ~ .tabs__labels .glider {
+  transform: translateX(100%); }
+
+.tabs input[id="radio-2"]:checked ~ .tabs__content .tabs__content__2 {
+  visibility: visible;
+  opacity: 1;
+  position: relative; }
+
+.tabs input[id="radio-3"]:checked ~ .tabs__labels .glider {
+  transform: translateX(200%); }
+
+.tabs input[id="radio-3"]:checked ~ .tabs__content .tabs__content__3 {
+  visibility: visible;
+  opacity: 1;
+  position: relative; }
+
+.tabs input[id="radio-4"]:checked ~ .tabs__labels .glider {
+  transform: translateX(300%); }
+
+.tabs input[id="radio-4"]:checked ~ .tabs__content .tabs__content__4 {
+  visibility: visible;
+  opacity: 1;
+  position: relative; }
+
+.tabs input[id="radio-5"]:checked ~ .tabs__labels .glider {
+  transform: translateX(400%); }
+
+.tabs input[id="radio-5"]:checked ~ .tabs__content .tabs__content__5 {
+  visibility: visible;
+  opacity: 1;
+  position: relative; }
+
+.card {
+  display: inline-block;
+  position: relative;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  width: 500px;
+  height: 200px;
+  overflow: hidden;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  transition: all 0.4s ease-in; }
+  .card i {
+    opacity: 0;
+    font-size: 18px;
+    color: #fff;
+    will-change: transform;
+    transform: scale(0.1);
+    transition: all 0.1s ease-in; }
+  .card__title {
+    display: block;
+    z-index: 99;
+    position: absolute;
+    bottom: 0;
+    pointer-events: none;
+    right: 130px;
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff; }
+  .card__arrow {
+    z-index: 100;
+    position: absolute;
+    right: 22px;
+    bottom: 26px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease-in; }
+  .card__cta {
+    z-index: 100;
+    position: absolute;
+    color: #fff;
+    right: 50px;
+    bottom: 23px;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.4s ease-in; }
+  .card__category {
+    z-index: 99;
+    position: absolute;
+    top: 20px;
+    right: 70px;
+    color: #333;
+    opacity: 0.7;
+    font-size: 12px;
+    writing-mode: vertical-lr;
+    transition: all 0.4s ease-in; }
+  .card__pic {
+    z-index: 100;
+    width: 400px;
+    height: 200px;
+    background-image: url("https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80");
+    background-size: 100% 100%;
+    filter: grayscale(100%);
+    transition: all 0.4s ease-in; }
+  .card__social {
+    position: absolute;
+    left: 100px;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 180px;
+    height: 64px;
+    border-radius: 80px; }
+    .card__social i span {
+      font-family: "Poppins", sans-serif; }
+  .card__social i:nth-of-type(1) {
+    transition-delay: 0.1s; }
+  .card:hover {
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.6); }
+  .card:hover i {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  .card__button {
+    position: absolute;
+    right: 14px;
+    bottom: 18px;
+    width: 30px;
+    height: 30px;
+    background: #000000;
+    background: linear-gradient(to right, #434343, #000000);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.4s ease-in; }
+    .card__button i {
+      font-size: 3rem; }
+  .card:hover .card__button {
+    transform: scale(15); }
+  .card:hover .card__cta {
+    opacity: 1; }
+  .card:hover .card__category {
+    color: #fff; }
+  .card:hover .card__pic {
+    filter: grayscale(0); }
 
 .header {
   max-width: 114rem;

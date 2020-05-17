@@ -1,16 +1,14 @@
-:root {
-  --primary-color: #185ee0;
-  --secondary-color: #e6eef9;
-}
-
 .tabs {
-  position: relative;
-  display: flex;
+  &__labels {
+    position: relative;
+    display: flex;
 
-  background-color: #fff;
-  box-shadow: 0 0 1px 0 rgba(#185ee0, 0.15), 0 6px 12px 0 rgba(#185ee0, 0.15);
+    background-color: #ffffff;
+    box-shadow: 0 0 1px 0 rgba($primary-color, 0.15),
+      0 6px 12px 0 rgba($primary-color, 0.15);
 
-  border-radius: 99px; // just a high number to create pill effect
+    border-radius: 99px;
+  }
 
   * {
     z-index: 2;
@@ -20,13 +18,8 @@
     display: none;
 
     &:checked {
-      & + label {
-        color: var(--primary-color);
-
-        & > .notification {
-          background-color: var(--primary-color);
-          color: #fff;
-        }
+      & + .tabs label {
+        color: $primary-color;
       }
     }
   }
@@ -38,7 +31,7 @@
     height: 5rem;
     width: 20%;
     font-size: 1.25rem;
-    border-radius: 99px; // just a high number to create pill effect
+    border-radius: 99px;
     cursor: pointer;
     transition: color 0.15s ease-in;
   }
@@ -54,55 +47,78 @@
     height: 5rem;
     width: 20%;
 
-    background-color: var(--secondary-color);
+    background-color: $secondary-color;
     z-index: 1;
-    border-radius: 99px; // just a high number to create pill effect
+    border-radius: 99px;
     transition: 0.25s ease-out;
-  }
-
-  & input[id="radio-1"] {
-    &:checked {
-      & ~ .glider {
-        transform: translateX(0);
-      }
-    }
-  }
-
-  & input[id="radio-2"] {
-    &:checked {
-      & ~ .glider {
-        transform: translateX(100%);
-      }
-    }
-  }
-
-  & input[id="radio-3"] {
-    &:checked {
-      & ~ .glider {
-        transform: translateX(200%);
-      }
-    }
-  }
-
-  & input[id="radio-4"] {
-    &:checked {
-      & ~ .glider {
-        transform: translateX(300%);
-      }
-    }
-  }
-
-  & input[id="radio-5"] {
-    &:checked {
-      & ~ .glider {
-        transform: translateX(400%);
-      }
-    }
   }
 }
 
 @media (max-width: 700px) {
   .tabs {
     transform: scale(0.6);
+  }
+}
+
+.tabs__content {
+  &__1,
+  &__2,
+  &__3,
+  &__4,
+  &__5 {
+    @include hidden;
+    position: absolute;
+    transition: opacity 0.5s;
+  }
+}
+
+// Logic here
+
+.tabs input[id="radio-1"]:checked {
+  & ~ .tabs__labels .glider {
+    transform: translateX(0);
+  }
+  & ~ .tabs__content .tabs__content__1 {
+    @include visible;
+    position: relative;
+  }
+}
+
+.tabs input[id="radio-2"]:checked {
+  & ~ .tabs__labels .glider {
+    transform: translateX(100%);
+  }
+  & ~ .tabs__content .tabs__content__2 {
+    @include visible;
+    position: relative;
+  }
+}
+
+.tabs input[id="radio-3"]:checked {
+  & ~ .tabs__labels .glider {
+    transform: translateX(200%);
+  }
+  & ~ .tabs__content .tabs__content__3 {
+    @include visible;
+    position: relative;
+  }
+}
+
+.tabs input[id="radio-4"]:checked {
+  & ~ .tabs__labels .glider {
+    transform: translateX(300%);
+  }
+  & ~ .tabs__content .tabs__content__4 {
+    @include visible;
+    position: relative;
+  }
+}
+.tabs input[id="radio-5"]:checked {
+  & ~ .tabs__labels .glider {
+    transform: translateX(400%);
+  }
+  & ~ .tabs__content .tabs__content__5 {
+    @include visible;
+    position: relative;
   }
 }
