@@ -36,3 +36,31 @@
   background-color: $color-w;
   color: $color-b;
 }
+
+.skills {
+  position: relative;
+  margin: -40% auto 0;
+
+  &:before {
+    @include absCenter;
+
+    position: absolute;
+    content: "Technologies & Software I used";
+    color: $color-b;
+    z-index: 2;
+    font-size: 1.6rem;
+  }
+
+  // gradient over image
+  &:after {
+    position: absolute;
+    content: "";
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-w;
+    background: linear-gradient($color-w 40%, transparent 55%);
+  }
+}
