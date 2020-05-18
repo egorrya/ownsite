@@ -1,5 +1,5 @@
 .works {
-  transition: all 0.8s ease-in;
+  transition: all 0.6s;
 
   &[data-emergence="hidden"] {
     @include hidden;

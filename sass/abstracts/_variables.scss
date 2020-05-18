@@ -5,8 +5,10 @@ $color-b: #000000;
 
 $color-grey: #3b3b3b;
 
-$primary-color: rgba(206, 160, 94, 1);
-$secondary-color: rgba(206, 160, 94, 0.2);
+$gradient-b: linear-gradient(to right, #434343, #000000);
+
+$primary-color: rgb(204, 204, 204);
+$secondary-color: rgba(177, 177, 177, 0.5);
 
 // grids
 $grid-width: 94rem;
