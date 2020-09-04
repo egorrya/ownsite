@@ -1,0 +1,15 @@
+.work {
+    display: inline-block;
+    max-width: 40%;
+    text-decoration: none;
+
+    &__image {
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    &__title {
+
+        color: $color-w;
+    }
+}

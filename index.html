@@ -1,201 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Egor Rya</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-  </head>
-  <body>
-    <!-- Loader -->
-    <div class="loader"><div class="loader__element"></div></div>
-    <!-- Header -->
-    <header class="header">
-      <nav class="main-nav">
-        <a href="#" class="main-nav__item active" id="works" data-hover="Works"
-          >Works</a
-        ><a href="#" class="main-nav__item" id="about" data-hover="About"
-          >About</a
-        ><a href="#" class="main-nav__item" id="contacts" data-hover="Contacts"
-          >Contacts</a
-        >
-      </nav>
-    </header>
-    <main>
-      <!-- Parallax -->
-      <div id="luxy">
-        <!-- Intro Screen -->
-        <section class="hero">
-          <div class="row">
-            <h1 class="h1 hero__intro">
-              I am Egor Ryabysh.<br />A full stack developer.
-            </h1>
-          </div>
-          <div class="hero__scroll-to">
-            <i class="ion-md-arrow-down"></i>&ensp;Scroll to discover
-          </div>
-        </section>
-        <!-- Banner -->
-        <section class="banner">
-          <div class="bnr">
-            <div class="bnr__text">
-              <div class="no-out" style="z-index: 1;">
-                <h1 class="luxy-el" data-horizontal="1" data-speed-x="-25">
-                  <span>Backend & Frontend Development</span>
-                </h1>
-                <h1 class="luxy-el" data-horizontal="1" data-speed-x="25">
-                  <span>Product Digital Design Solutions</span>
-                </h1>
-              </div>
-              <div
-                class="bnr__img bnr__imgrev"
-                data-speed-y="-20"
-                data-offset="-80"
-              >
-                <img src="img/1-back.jpg" />
-                <div>
-                  <img src="img/1.jpg" class="luxy-el" data-speed-y="7" />
-                </div>
-              </div>
-              <div style="z-index: 3;">
-                <h1
-                  class="luxy-el bnr__outline"
-                  data-horizontal="1"
-                  data-speed-x="-25"
-                >
-                  <span>Backend & Frontend Development</span>
-                </h1>
-                <h1
-                  class="le luxy-el bnr__outline"
-                  data-horizontal="1"
-                  data-speed-x="25"
-                >
-                  <span>Product Digital Design Solutions</span>
-                </h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Egor Rya</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+</head>
+
+<body>
+  <!-- Loader -->
+  <div class="loader">
+    <div class="loader__element"></div>
+  </div>
+
+  <main>
+    <!-- Parallax -->
+    <div id="luxy">
+
+      <!-- Header -->
+      <header class="header">
+        <nav class="main-nav">
+          <a href="#" class="main-nav__item active" id="works" data-hover="Works">Works</a><a href="#"
+            class="main-nav__item" id="about" data-hover="About">About</a><a href="#" class="main-nav__item"
+            id="contacts" data-hover="Contacts">Contacts</a>
+        </nav>
+      </header>
+
+      <!-- Intro Screen -->
+      <section class="hero">
+        <div class="row">
+          <h1 class="h1 hero__intro" data-emergence="hidden">
+            I am Egor Ryabysh.<br />A front end developer.
+          </h1>
+        </div>
+        <div class="hero__scroll-to">
+          <i class="ion-md-arrow-down"></i>&ensp;Scroll to discover
+        </div>
+      </section>
+      <!-- Banner -->
+      <section class="banner">
+        <div class="bnr">
+          <div class="bnr__text">
+            <div class="no-out" style="z-index: 1;">
+              <h1 class="luxy-el" data-horizontal="1" data-speed-x="-25">
+                <span>Backend & Frontend Development</span>
+              </h1>
+              <h1 class="luxy-el" data-horizontal="1" data-speed-x="25">
+                <span>Product Digital Design Solutions</span>
+              </h1>
+            </div>
+            <div class="bnr__img bnr__imgrev" data-speed-y="-20" data-offset="-80">
+              <img src="img/1-back.jpg" />
+              <div>
+                <img src="img/1.jpg" class="luxy-el" data-speed-y="7" />
               </div>
             </div>
-          </div>
-        </section>
-        <!-- Works -->
-        <section class="works" data-emergence="hidden">
-          <span class="works__fill"></span>
-          <div class="row">
-            <h2 class="h2">Works I want to show you.</h2>
-            <!-- Tabs -->
-            <div class="tabs u-margin-top-s">
-              <input type="radio" id="radio-1" name="tabs" checked />
-              <input type="radio" id="radio-2" name="tabs" />
-              <input type="radio" id="radio-3" name="tabs" />
-              <input type="radio" id="radio-4" name="tabs" />
-              <input type="radio" id="radio-5" name="tabs" />
-
-              <div class="tabs__labels u-margin-bottom-m">
-                <label class="tabs__tab tabs__tab--1" for="radio-1"
-                  >Chrome Extensions<i class="tabs__icon ion-logo-chrome"></i
-                ></label>
-
-                <label class="tabs__tab tabs__tab--2" for="radio-2"
-                  >Full Stack<i class="tabs__icon ion-md-code"></i
-                ></label>
-
-                <label class="tabs__tab tabs__tab--3" for="radio-3"
-                  >Frontend<i class="tabs__icon ion-md-tv"></i
-                ></label>
-
-                <label class="tabs__tab tabs__tab--4" for="radio-4"
-                  >Backend<i class="tabs__icon ion-logo-nodejs"></i
-                ></label>
-
-                <label class="tabs__tab tabs__tab--5" for="radio-5"
-                  >CMS<i class="tabs__icon ion-logo-wordpress"></i
-                ></label>
-
-                <span class="glider"></span>
-              </div>
-              <!-- Content -->
-              <div class="tabs__content">
-                <div class="tabs__content__1">
-                  <a
-                    href="https://chrome.google.com/webstore/detail/blending-scrollbar/ajjnokaolfbjimgelmdmdlijoclmjnag"
-                    class="card"
-                  >
-                    <h2 class="card__title">Blending Scrollbar</h2>
-                    <i class="ion-md-arrow-forward card__arrow"></i>
-                    <p class="card__cta">Visit</p>
-                    <p class="card__category">Chrome Web Store</p>
-                    <div class="card__pic"></div>
-
-                    <!-- <div class="card__social">
-                      <i class="ion-logo-github"><span>&ensp;Github</span></i>
-                    </div> -->
-                    <button class="card__button"></button>
-                  </a>
-                </div>
-                <div class="tabs__content__2">Temporary Empty</div>
-                <div class="tabs__content__3">Temporary Empty</div>
-                <div class="tabs__content__4">Temporary Empty</div>
-                <div class="tabs__content__5">Temporary Empty</div>
-              </div>
+            <div style="z-index: 3;">
+              <h1 class="luxy-el bnr__outline" data-horizontal="1" data-speed-x="-25">
+                <span>Backend & Frontend Development</span>
+              </h1>
+              <h1 class="le luxy-el bnr__outline" data-horizontal="1" data-speed-x="25">
+                <span>Product Digital Design Solutions</span>
+              </h1>
             </div>
           </div>
-          <!-- Skills -->
-          <div class="row">
-            <div class="skills u-margin-bottom-xl">
-              <h2 class="skills__title">Technologies & Software I Use</h2>
-              <img
-                src="https://www.datocms-assets.com/16414/1572017578-alllogonew.svg"
-                alt="Integrations"
-              />
-            </div>
+        </div>
+      </section>
+      <!-- Works -->
+      <section class="works" data-emergence="hidden">
+
+        <div class="row">
+          <h2 class="h2">Some of my projects.</h2>
+
+          <div class="column">
+            <a href="https://dribbble.com/shots/7387498-Job-agency-landing-page" class="work">
+              <img src="https://michalkmet.com/images/job_agency.jpg" alt="" class="work__image" />
+              <h2 class="work__title ">Soldsite.ru</h2>
+            </a>
           </div>
-        </section>
 
-        <!-- About -->
-        <!-- Contacts -->
-      </div>
-    </main>
-    <!-- Paralax library -->
-    <script src="js/luxy.js"></script>
-    <!-- Scroll detection library -->
-    <script src="js/emergence.js"></script>
-    <script>
-      // on load
-      window.addEventListener("load", function () {
-        // loader
-        const loader = document.querySelector(".loader");
-        loader.className += " hidden"; // class "loader hidden"
-      });
 
-      //parallax
-      luxy.init();
 
-      // scroll detection
-      emergence.init({
-        container: window,
-        reset: true,
-        handheld: true,
-        throttle: 250,
-        elemCushion: 0.1,
-        offsetTop: 100,
-        offsetRight: 0,
-        offsetBottom: 0,
-        offsetLeft: 0,
-        callback: function (element, state) {
-          if (state === "visible") {
-            console.log("Element is visible.");
-          } else if (state === "reset") {
-            console.log("Element is hidden with reset.");
-          } else if (state === "noreset") {
-            console.log("Element is hidden with NO reset.");
-          }
-        },
-      });
-    </script>
-    <noscript
-      >Congrats Time Traveller, You are in the 90s. Now in order to access this
-      site you either need to update your browser or enable Javascript from
-      settings. And please don't use Internet explorer :).
-    </noscript>
-  </body>
+
+        </div>
+        <!-- Skills -->
+
+      </section>
+
+      <!-- About -->
+      <!-- Contacts -->
+    </div>
+  </main>
+  <!-- Paralax library -->
+  <script src="js/luxy.js"></script>
+  <!-- Scroll detection library -->
+  <script src="js/emergence.js"></script>
+  <script>
+    // on load
+    window.addEventListener("load", function () {
+      // loader
+      const loader = document.querySelector(".loader");
+      loader.className += " hidden"; // class "loader hidden"
+    });
+
+    //parallax
+    luxy.init();
+
+    // scroll detection
+    emergence.init({
+      container: window,
+      reset: false,
+      handheld: true,
+      throttle: 250,
+      elemCushion: 0.7,
+      offsetTop: 100,
+      offsetRight: 0,
+      offsetBottom: 0,
+      offsetLeft: 0,
+      callback: function (element, state) {
+        if (state === "visible") {
+          console.log("Element is visible.");
+        } else if (state === "reset") {
+          console.log("Element is hidden with reset.");
+        } else if (state === "noreset") {
+          console.log("Element is hidden with NO reset.");
+        }
+      },
+    });
+  </script>
+  <noscript>Congrats Time Traveller, You are in the 90s. Now in order to access this
+    site you either need to update your browser or enable Javascript from
+    settings. And please don't use Internet explorer :).
+  </noscript>
+</body>
+
 </html>
