@@ -35,7 +35,7 @@ html {
 
 body {
   box-sizing: border-box;
-  background-color: #000;
+  background-color: #101010;
   color: #f8f8f8; }
 
 ::selection {
@@ -56,7 +56,7 @@ body {
   box-sizing: border-box;
   font-family: "Radikal", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.6;
   font-size: 1.6rem; }
 
 .h1 {
@@ -67,6 +67,12 @@ body {
 
 .h2 {
   font-size: 5rem;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Radikal", Helvetica, Arial, sans-serif; }
+
+.h3 {
+  font-size: 3rem;
   line-height: 1.2;
   font-weight: 400;
   font-family: "Radikal", Helvetica, Arial, sans-serif; }
@@ -167,13 +173,13 @@ body {
   .row .col-1-of-3 {
     width: calc((100% - 2 * 6rem) / 3); }
   .row .col-2-of-3 {
-    width: calc( 2 * (100% - 2 * 6rem) / 3 + 6rem); }
+    width: calc(2 * (100% - 2 * 6rem) / 3 + 6rem); }
   .row .col-1-of-4 {
     width: calc((100% - 3 * 6rem) / 4); }
   .row .col-2-of-4 {
-    width: calc( 2 * (100% - 3 * 6rem) / 4 + 6rem); }
+    width: calc(2 * (100% - 3 * 6rem) / 4 + 6rem); }
   .row .col-3-of-4 {
-    width: calc( 3 * (100% - 3 * 6rem) / 4 + 6rem * 2); }
+    width: calc(3 * (100% - 3 * 6rem) / 4 + 6rem * 2); }
 
 .main-nav {
   position: absolute;
@@ -182,7 +188,7 @@ body {
   z-index: 10000;
   cursor: default; }
   .main-nav__item {
-    color: #3b3b3b;
+    color: #aaa;
     font-size: 1.8rem;
     line-height: 1.2;
     text-decoration: none;
@@ -216,7 +222,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000; }
+  background-color: #101010; }
 
 .loader.hidden {
   animation: loaderFadeOut 1.5s;
@@ -281,7 +287,7 @@ body {
 
 .bnr__imgrev::before {
   content: "";
-  background: #000;
+  background: #101010;
   position: absolute;
   width: 100%;
   height: 0;
@@ -298,7 +304,7 @@ body {
   .bnr__text {
     position: relative;
     transform: translate(0, 50vh);
-    height: inherit;
+    height: 20rem;
     font-family: "Radikal Black", "Radikal", Helvetica, Arial, sans-serif;
     line-height: 110%;
     font-size: 5vw; }
@@ -313,7 +319,6 @@ body {
       margin: auto; }
   .bnr__img {
     width: 35%;
-    height: 80%;
     position: relative;
     margin-left: 55%;
     z-index: 2;
@@ -346,13 +351,18 @@ body {
 
 .work {
   display: inline-block;
-  max-width: 40%;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: transform 500ms ease, color 400ms ease, -webkit-transform 500ms ease; }
+  .work:hover {
+    transform: translate(0px, -20px); }
   .work__image {
-    width: 100%;
-    border-radius: 15px; }
+    border-radius: 15px;
+    max-width: 100%; }
   .work__title {
     color: #f8f8f8; }
+  .work__description {
+    margin-top: 2rem;
+    color: #aaa; }
 
 .header {
   max-width: 114rem;
@@ -361,6 +371,13 @@ body {
     content: "";
     display: table;
     clear: both; }
+
+#myVideo {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto; }
 
 .hero {
   position: relative;
@@ -372,7 +389,7 @@ body {
     position: absolute;
     bottom: 10%;
     left: 6%;
-    color: #3b3b3b;
+    color: #aaa;
     font-size: 1.6rem;
     cursor: default; }
 

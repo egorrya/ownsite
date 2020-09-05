@@ -31,7 +31,7 @@
   &__text {
     position: relative;
     transform: translate(0, 50vh);
-    height: inherit;
+    height: 20rem;
     font-family: "Radikal Black", "Radikal", Helvetica, Arial, sans-serif;
     line-height: 110%;
     font-size: 5vw;
@@ -54,7 +54,7 @@
 
   &__img {
     width: 35%;
-    height: 80%;
+    // height: 80%;
     position: relative;
     margin-left: 55%;
     z-index: 2;

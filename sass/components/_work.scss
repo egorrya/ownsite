@@ -1,15 +1,25 @@
 .work {
     display: inline-block;
-    max-width: 40%;
     text-decoration: none;
+    transition: transform 500ms ease, color 400ms ease, -webkit-transform 500ms ease;
+
+    &:hover {
+        transform: translate(0px, -20px);
+    }
 
     &__image {
-        width: 100%;
         border-radius: 15px;
+        max-width: 100%;
+
     }
 
     &__title {
-
         color: $color-w;
+    }
+
+    &__description {
+        margin-top: 2rem;
+        color: $color-grey;
+
     }
 }
