@@ -1,5 +1,5 @@
-.hero__intro {
-  transition: all 1s;
+.fade-in-bottom {
+  transition: all 2s ease;
 
   &[data-emergence="hidden"] {
     @include hidden;

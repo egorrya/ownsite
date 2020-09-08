@@ -39,7 +39,7 @@
       <!-- Intro Screen -->
       <section class="hero">
         <div class="row">
-          <h1 class="h1 hero__intro" data-emergence="hidden">
+          <h1 class="h1 hero__intro fade-in-bottom" data-emergence="hidden">
             I am Egor Ryabysh.<br />A front end developer.
           </h1>
         </div>
@@ -49,7 +49,7 @@
       </section>
       <!-- Banner -->
       <section class="banner">
-        <div class="bnr">
+        <div class="bnr ">
           <div class="bnr__text">
             <div class="no-out" style="z-index: 1;">
               <h1 class="luxy-el" data-horizontal="1" data-speed-x="-25">
@@ -60,9 +60,9 @@
               </h1>
             </div>
             <div class="bnr__img bnr__imgrev" data-speed-y="-20" data-offset="-80">
-              <img src="img/1-back.jpg" />
+              <img src="img/1-back-min.jpg" />
               <div>
-                <img src="img/1.jpg" class="luxy-el" data-speed-y="7" />
+                <img src="img/1-min.jpg" class="luxy-el" data-speed-y="7" />
               </div>
             </div>
             <div style="z-index: 3;">
@@ -77,11 +77,30 @@
         </div>
       </section>
       <!-- Works -->
-      <section class="works" data-emergence="hidden">
+      <section class="works">
 
         <div class="row">
-          <h2 class="h2">Some of my projects.</h2>
+          <!-- <h2 class="h2 fade-in-bottom" data-emergence="hidden">Some of my projects.</h2> -->
+          <div class="col-1-of-2">
+            <a href="#" class="work">
+              <img src="https://michalkmet.com/images/job_agency.jpg" alt="" class="work__image fade-in-bottom"
+                data-emergence="hidden" />
+              <h2 class="work__title ">Soldsite.ru</h2>
+            </a>
+          </div>
+          <div class="col-1-of-2">
+            <div class="work-text luxy-el" data-speed-y="8" data-offset="-95">
+              <h3 class="h3 work-text__title">My Web Agency</h3>
+              <p class="work-text__description">I made this agency in january 2018. I work there as a freelancer and
+                make design, websites and some programming stuff. For that time i made over 150 websites. You can
+                check
+                some of them by checking Soldsite.ru. And more small
+                work. My clients usually small bussineses but there also were big ones like wildberries.</p>
+            </div>
+          </div>
+        </div>
 
+        <div class="row">
           <div class="col-1-of-2">
             <a href="#" class="work ">
               <img src="https://michalkmet.com/images/job_agency.jpg" alt="" class="work__image" />
@@ -89,21 +108,20 @@
             </a>
           </div>
           <div class="col-1-of-2">
-            <h3 class="h3">Soldsite.ru</h3>
-            <p class="work__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi enim, doloremque
-              possimus totam autem
-              assumenda officiis ratione facilis commodi quod deserunt laborum, explicabo nobis temporibus eius
-              inventore iusto ut ipsum?</p>
+            <a href="#" class="work ">
+              <img src="https://michalkmet.com/images/job_agency.jpg" alt="" class="work__image" />
+              <h2 class="work__title ">Soldsite.ru</h2>
+            </a>
           </div>
-
-
         </div>
-        <!-- Skills -->
 
-      </section>
+    </div>
+    <!-- Skills -->
 
-      <!-- About -->
-      <!-- Contacts -->
+    </section>
+
+    <!-- About -->
+    <!-- Contacts -->
     </div>
   </main>
   <!-- Paralax library -->
@@ -113,9 +131,11 @@
   <script>
     // on load
     window.addEventListener("load", function () {
+
       // loader
       const loader = document.querySelector(".loader");
       loader.className += " hidden"; // class "loader hidden"
+
     });
 
     //parallax
@@ -127,7 +147,7 @@
       reset: false,
       handheld: true,
       throttle: 250,
-      elemCushion: 0.7,
+      elemCushion: 0.4,
       offsetTop: 100,
       offsetRight: 0,
       offsetBottom: 0,

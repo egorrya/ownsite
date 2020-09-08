@@ -41,13 +41,13 @@ body {
 ::selection {
   background-color: #e6eef9; }
 
-.hero__intro {
-  transition: all 1s; }
-  .hero__intro[data-emergence="hidden"] {
+.fade-in-bottom {
+  transition: all 2s ease; }
+  .fade-in-bottom[data-emergence="hidden"] {
     visibility: hidden;
     opacity: 0;
     margin-top: 10rem; }
-  .hero__intro[data-emergence="visible"] {
+  .fade-in-bottom[data-emergence="visible"] {
     visibility: visible;
     opacity: 1;
     margin-top: 0rem; }
@@ -60,7 +60,7 @@ body {
   font-size: 1.6rem; }
 
 .h1 {
-  font-size: 9rem;
+  font-size: 8rem;
   line-height: 1.2;
   font-weight: 400;
   font-family: "Radikal", Helvetica, Arial, sans-serif; }
@@ -72,7 +72,7 @@ body {
   font-family: "Radikal", Helvetica, Arial, sans-serif; }
 
 .h3 {
-  font-size: 3rem;
+  font-size: 3.2rem;
   line-height: 1.2;
   font-weight: 400;
   font-family: "Radikal", Helvetica, Arial, sans-serif; }
@@ -188,7 +188,7 @@ body {
   z-index: 10000;
   cursor: default; }
   .main-nav__item {
-    color: #aaa;
+    color: #666;
     font-size: 1.8rem;
     line-height: 1.2;
     text-decoration: none;
@@ -360,8 +360,11 @@ body {
     max-width: 100%; }
   .work__title {
     color: #f8f8f8; }
-  .work__description {
-    margin-top: 2rem;
+
+.work-text {
+  vertical-align: middle; }
+  .work-text__description {
+    margin-top: 1.5rem;
     color: #aaa; }
 
 .header {
