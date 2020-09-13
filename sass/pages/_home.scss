@@ -31,3 +31,108 @@
     margin-bottom: 3rem;
   }
 }
+
+.about {
+
+  &__title {
+    position: relative;
+    text-align: center;
+
+    & img {
+      position: absolute;
+      top: 1.5rem;
+      // left: 28rem;
+      right: 0;
+      margin: 0 auto;
+      height: 6rem;
+
+      transition: all 1s;
+
+      &[data-emergence="hidden"] {
+        @include hidden;
+        left: 0rem;
+      }
+
+      &[data-emergence="visible"] {
+        @include visible;
+        left: 28rem;
+      }
+    }
+  }
+
+  &__text {
+    text-align: center;
+    color: $color-grey;
+  }
+
+  &__tools {
+    text-align: center;
+
+    h3 {
+      text-transform: uppercase;
+    }
+
+    p {
+      color: $color-grey;
+    }
+  }
+}
+
+.contacts {
+  text-align: center;
+
+  &__h2 {
+    position: relative;
+    text-align: center;
+
+    & img {
+      position: absolute;
+      top: 0.5rem;
+      right: 0;
+      margin: 0 auto;
+      height: 8rem;
+
+
+      transition: all 1s;
+
+      &[data-emergence="hidden"] {
+        @include hidden;
+        left: 0rem;
+      }
+
+      &[data-emergence="visible"] {
+        @include visible;
+        left: 5rem;
+      }
+    }
+  }
+
+  &__link {
+    color: #666;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+
+    &:after {
+      content: attr(data-hover);
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 1.8rem;
+      line-height: 1.2;
+      color: $color-w;
+      width: 0;
+      overflow: hidden;
+      white-space: nowrap;
+
+      transition: .3s ease-out width;
+    }
+
+    &:hover:after {
+      width: 100%;
+      transition: .3s ease-in width;
+    }
+  }
+}

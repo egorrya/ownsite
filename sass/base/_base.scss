@@ -7,6 +7,7 @@
 }
 
 html {
+
   font-size: 62.5%; // 1rem = 10px
 
   @include respond(tab-land) {
@@ -30,4 +31,14 @@ body {
 
 ::selection {
   background-color: #e6eef9;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

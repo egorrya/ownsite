@@ -12,7 +12,7 @@
 
   // not for everything except for last child
   &:not(:last-child) {
-    margin-bottom: $gutter-vertical;
+    // margin-bottom: $gutter-vertical;
 
     @include respond(tab-port) {
       margin-bottom: $gutter-vertical-small;

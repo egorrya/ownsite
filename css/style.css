@@ -41,6 +41,13 @@ body {
 ::selection {
   background-color: #e6eef9; }
 
+html {
+  scroll-behavior: smooth; }
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto; } }
+
 .fade-in-bottom {
   transition: all 2s ease; }
   .fade-in-bottom[data-emergence="hidden"] {
@@ -51,6 +58,17 @@ body {
     visibility: visible;
     opacity: 1;
     margin-top: 0rem; }
+
+.fade-in-left {
+  transition: all 1s; }
+  .fade-in-left[data-emergence="hidden"] {
+    visibility: hidden;
+    opacity: 0;
+    margin-left: -10rem; }
+  .fade-in-left[data-emergence="visible"] {
+    visibility: visible;
+    opacity: 1;
+    margin-left: 0rem; }
 
 body {
   box-sizing: border-box;
@@ -151,11 +169,9 @@ body {
     .row {
       max-width: 50rem;
       padding: 0 2.5rem; } }
-  .row:not(:last-child) {
-    margin-bottom: 8rem; }
-    @media only screen and (max-width: 56.25em) {
-      .row:not(:last-child) {
-        margin-bottom: 6rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .row:not(:last-child) {
+      margin-bottom: 6rem; } }
   .row [class^="col-"] {
     float: left;
     padding: 20px 0; }
@@ -398,3 +414,76 @@ body {
 
 .works h2 {
   margin-bottom: 3rem; }
+
+.about__title {
+  position: relative;
+  text-align: center; }
+  .about__title img {
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+    margin: 0 auto;
+    height: 6rem;
+    transition: all 1s; }
+    .about__title img[data-emergence="hidden"] {
+      visibility: hidden;
+      opacity: 0;
+      left: 0rem; }
+    .about__title img[data-emergence="visible"] {
+      visibility: visible;
+      opacity: 1;
+      left: 28rem; }
+
+.about__text {
+  text-align: center;
+  color: #aaa; }
+
+.about__tools {
+  text-align: center; }
+  .about__tools h3 {
+    text-transform: uppercase; }
+  .about__tools p {
+    color: #aaa; }
+
+.contacts {
+  text-align: center; }
+  .contacts__h2 {
+    position: relative;
+    text-align: center; }
+    .contacts__h2 img {
+      position: absolute;
+      top: 0.5rem;
+      right: 0;
+      margin: 0 auto;
+      height: 8rem;
+      transition: all 1s; }
+      .contacts__h2 img[data-emergence="hidden"] {
+        visibility: hidden;
+        opacity: 0;
+        left: 0rem; }
+      .contacts__h2 img[data-emergence="visible"] {
+        visibility: visible;
+        opacity: 1;
+        left: 5rem; }
+  .contacts__link {
+    color: #666;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    text-decoration: none;
+    display: inline-block;
+    position: relative; }
+    .contacts__link:after {
+      content: attr(data-hover);
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 1.8rem;
+      line-height: 1.2;
+      color: #f8f8f8;
+      width: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      transition: .3s ease-out width; }
+    .contacts__link:hover:after {
+      width: 100%;
+      transition: .3s ease-in width; }
